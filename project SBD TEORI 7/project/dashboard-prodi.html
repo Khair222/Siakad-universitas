@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Prodi - SIAKAD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="sidebar-logo-icon" style="color: #0ea5e9;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18"/>
+                            <path d="M5 21V7l8-4 8 4v14"/>
+                            <path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11H9V10z"/>
+                        </svg>
+                    </div>
+                    <div class="sidebar-logo-text">
+                        <h1>SIAKAD</h1>
+                        <p>Prodi D3 TI</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-user">
+                    <div class="user-avatar" style="background: #0ea5e9;">KP</div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Normalina N.</div>
+                        <div class="user-role">Ketua Program Studi</div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebarNav">
+                <button class="nav-item active" data-page="dashboard">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                    <span>Overview Stats</span>
+                </button>
+                
+                <button class="nav-item" data-page="approval-krs">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <span>Approval KRS</span>
+                </button>
+
+                <button class="nav-item" data-page="kurikulum">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                    </svg>
+                    <span>Kurikulum & MK</span>
+                </button>
+
+                <button class="nav-item" data-page="laporan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <line x1="9" y1="15" x2="15" y2="15"/>
+                    </svg>
+                    <span>Laporan Akademik</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="nav-item" data-page="pengaturan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6m0 6v6"/>
+                        <path d="M23 12h-6M7 12H1"/>
+                        <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/>
+                        <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"/>
+                    </svg>
+                    <span>Pengaturan</span>
+                </button>
+                <button class="nav-item" id="logoutBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        <polyline points="16 17 21 12 16 7"/>
+                        <line x1="21" y1="12" x2="9" y2="12"/>
+                    </svg>
+                    <span>Keluar</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header class="main-header">
+                <div class="header-title">
+                    <h2>Dashboard Program Studi</h2>
+                    <p>Selamat datang, <span id="welcomeName">Ibu Kaprodi</span></p>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notification-badge">5</span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="main-body" id="mainContent">
+                </main>
+        </div>
+    </div>
+
+    <script src="dashboard-prodi.js"></script>
+</body>
+</html>

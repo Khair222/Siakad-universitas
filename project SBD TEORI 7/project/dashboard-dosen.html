@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dosen - SIAKAD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="sidebar-logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <div class="sidebar-logo-text">
+                        <h1>SIAKAD</h1>
+                        <p>D3 TI Vokasi USU</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-user">
+                    <div class="user-avatar" id="userAvatar">AF</div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Dr. Ahmad Fauzi</div>
+                        <div class="user-role">Dosen</div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebarNav">
+                <button class="nav-item active" data-page="dashboard">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-page="jadwal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    </svg>
+                    <span>Jadwal Mengajar</span>
+                </button>
+                <button class="nav-item" data-page="input-nilai">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    <span>Input Nilai</span>
+                </button>
+                <button class="nav-item" data-page="input-absensi">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                    <span>Input Absensi</span>
+                </button>
+                <button class="nav-item" data-page="monitoring">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span>Monitoring Mhs</span>
+                </button>
+                <button class="nav-item" data-page="upload">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <span>Upload Materi & Tugas</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="nav-item" data-page="settings">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M12 1v6m0 6v6" />
+                        <path d="M23 12h-6M7 12H1" />
+                        <path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24" />
+                        <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24" />
+                    </svg>
+                    <span>Pengaturan</span>
+                </button>
+                <button class="nav-item" id="logoutBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                    <span>Keluar</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="main-header">
+                <div class="header-title">
+                    <h2>Dashboard Dosen</h2>
+                    <p>Selamat datang kembali, <span id="welcomeName">Dr. Ahmad Fauzi</span></p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        <input type="text" placeholder="Cari mahasiswa...">
+                    </div>
+                    <button class="notification-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        </svg>
+                        <span class="notification-badge">5</span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="main-body" id="mainContent">
+                <!-- Content will be loaded here dynamically -->
+            </main>
+        </div>
+    </div>
+
+    <script src="dashboard-dosen.js"></script>
+</body>
+
+</html>

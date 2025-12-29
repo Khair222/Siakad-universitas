@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAKAD - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Side - Hero Section -->
+        <div class="login-hero">
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div class="logo-box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="hero-title">
+                        <h1>SIAKAD</h1>
+                        <p>D3 Teknik Informatika</p>
+                    </div>
+                </div>
+
+                <div class="hero-main">
+                    <h2>Sistem Informasi<br>Akademik Terpadu</h2>
+                    <p>Solusi lengkap untuk mengelola aktivitas akademik Program Studi D3 Teknik Informatika Vokasi USU</p>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <div class="stat-number">450+</div>
+                    <div class="stat-label">Mahasiswa</div>
+                </div>
+                <div class="stat-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                    <div class="stat-number">48</div>
+                    <div class="stat-label">Mata Kuliah</div>
+                </div>
+                <div class="stat-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <div class="stat-number">25</div>
+                    <div class="stat-label">Dosen</div>
+                </div>
+                <div class="stat-card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Wali Murid</div>
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                © 2024 Vokasi USU. All rights reserved.
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-form-section">
+            <div class="login-form-container">
+                <div class="form-header">
+                    <h2>Selamat Datang</h2>
+                    <p>Silakan login untuk mengakses sistem</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Pilih Peran</label>
+                        <div class="role-grid">
+                            <div class="role-card" data-role="mahasiswa">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <div class="role-label">Mahasiswa</div>
+                            </div>
+                            <div class="role-card" data-role="dosen">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                                <div class="role-label">Dosen</div>
+                            </div>
+                            <div class="role-card" data-role="prodi">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                <div class="role-label">Program Studi</div>
+                            </div>
+                            <div class="role-card" data-role="orang_tua">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                                <div class="role-label">Orang Tua</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Masukkan username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input">
+                            <input type="password" id="password" placeholder="Masukkan password" required>
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-login">Masuk</button>
+
+                    <div class="demo-info">
+                        Demo: Gunakan password <code>123456</code> untuk login
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
